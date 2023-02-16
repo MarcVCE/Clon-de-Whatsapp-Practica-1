@@ -2,6 +2,7 @@
   width: 80%;
   margin: 25px auto;
 }
+
 .body-app {
   height: 10vh;
 }
@@ -9,6 +10,7 @@
 .conversation {
   margin-bottom: 20px;
 }
+
 .conversation-container {
   height: 400px;
   overflow-y: scroll;
@@ -30,6 +32,7 @@
   display: flex;
   margin-top: 10px;
 }
+
 .boton-verde {
   background-color: green;
 }
@@ -49,6 +52,7 @@ input[type='button'] {
   border-radius: 4px;
   margin-left: 5px;
 }
+
 img {
   height: 50px;
   width: 50px;
@@ -57,15 +61,19 @@ img {
   padding-right: 5px;
   margin-left: -10px;
 }
+
 .navbar {
   background-color: green;
 }
+
 .navbar h1 {
   color: white;
 }
+
 i {
   color: white;
 }
+
 #usersBar {
   float: left;
   width: 20%;
@@ -75,7 +83,6 @@ i {
 
 #usersBar ul li {
   display: flex;
-
   flex-direction: row-reverse;
   height: 70px;
   list-style-type: none;
@@ -102,13 +109,16 @@ i {
   position: absolute;
   padding-bottom: 10%;
 }
+
 #mensajes div {
   font-size: 15px;
   display: flex;
 }
+
 #botton-agregar {
   width: 20%;
 }
+
 .green-bubble {
   background-color: #7dff33;
   padding: 0px 20px;
@@ -162,4 +172,3 @@ i {
 #mensajes::-webkit-scrollbar-thumb {
   background-color: green;
 }
-
