@@ -9,51 +9,46 @@ let users = [
     {name: "Alice Allen", profileImage: "https://images.generated.photos/fvo-IFvzQ3R6dNQtWW4-ZHyocmmjMzBkd4kCOv3y_Ck/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/OTY5MjgwLmpwZw.jpg"},
     {name: "Tony Stark", profileImage: "https://randomuser.me/api/portraits/men/54.jpg"},
     {name: "Steve Rogers", profileImage: "https://randomuser.me/api/portraits/men/64.jpg"}
-  ];
-    function generarUsuarios(){
-      for (let i = 0; i < users.length; i++) {
+];
+
+function generarUsuarios(){
+  for (let i = 0; i < users.length; i++) {
     let user = users[i];
     let listItem = document.createElement('li');
     let userName = document.createElement('h3');
     let userImage = document.createElement('img');
-
     userName.innerHTML = user.name;
     userImage.src = user.profileImage;
-
     listItem.appendChild(userName);
     listItem.appendChild(userImage);
-
-   document.querySelector('ul').appendChild(listItem);
-    
+    document.querySelector('ul').appendChild(listItem);    
   }
-    }
-  generarUsuarios();
+}
+  
+generarUsuarios();
 
 function agregarMensaje(){
-  console.log("hola");
-       var mensajediv = document.createElement('div');
-      var mensajespan = document.createElement('span');
-      let input= document.getElementById("text-input");
-      
-        
-      Math.round(Math.random()) == 1?
-      mensajespan.className= "green-bubble"
-      : mensajespan.className= "white-bubble";
-      
-      
-      mensajediv.appendChild(mensajespan);
-mensajespan.innerHTML= input.value; 
-     input.value="";
+    var mensajediv = document.createElement('div');
+    var mensajespan = document.createElement('span');
+    let input= document.getElementById("text-input");
+    
+    Math.round(Math.random()) == 1?
+    mensajespan.className= "green-bubble"
+    : mensajespan.className= "white-bubble";
+    
+    mensajediv.appendChild(mensajespan);
+    mensajespan.innerHTML= input.value; 
+    input.value="";
     document.getElementById("mensajes").appendChild(mensajediv);
-    }
+}
 
-    document.getElementById("enviar-mensaje").addEventListener("click", ()=>{agregarMensaje()});
+document.getElementById("enviar-mensaje").addEventListener("click", ()=>{agregarMensaje()});
 
- document.getElementById("text-input").addEventListener("keypress", (event)=>{
-   console.log(event)
-                 if (event.key === 'Enter') {
-     agregarMensaje()
-    }}                                           );
+document.getElementById("text-input").addEventListener("keypress", (event)=>{
+     if (event.key === 'Enter') {
+          agregarMensaje()
+      }
+ });
 
  window.addEventListener("load", function(event) {
     document.getElementById("user-name").innerHTML= users[0].name;
@@ -62,7 +57,7 @@ mensajespan.innerHTML= input.value;
 document.querySelector('ul').addEventListener("click", function nuevaConv(event){
   if(event.target.localName=="h3" ){
      document.getElementById("user-name").innerHTML= event.target.innerHTML; 
-  document.getElementById('mensajes').innerHTML="";
+     document.getElementById('mensajes').innerHTML="";
   }
 
   
@@ -70,7 +65,7 @@ document.querySelector('ul').addEventListener("click", function nuevaConv(event)
 
 document.getElementById('botton-agregar').addEventListener("click", function agregarUsuario(event){
   let nuevoUsuario= {name:"Superman", profileImage:"https://randomuser.me/api/portraits/men/34.jpg"};
-users.push(nuevoUsuario);
+  users.push(nuevoUsuario);
   document.getElementById('ulUsers').innerHTML="";
   generarUsuarios();
 })
